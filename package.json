@@ -4,20 +4,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
-  
   },
   "dependencies": {
+    "flowbite": "^1.4.7",
     "vue": "^3.0.5",
     "vue-router": "^4.0.6",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
-    
     "@vue/cli-service": "~5.0.0",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.10",
     "tailwindcss": "^2.1.1"
-     }
+  }
 }

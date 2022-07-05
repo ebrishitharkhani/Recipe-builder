@@ -131,6 +131,61 @@
               />
             </div>
           </div>
+          <div class="-mx-3 md:flex mb-2" v-for="(input,k) in inputs" :key="k">
+      <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          for="grid-city"
+        >
+          Ingredients Name
+        </label>
+        <input
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          id="grid-city"
+          type="textarea"
+          v-model="editRecipeId.ingredientsName"
+          ref="ingredientsName"
+          placeholder="Ingredients Name"
+        />
+      </div>
+
+      <div class="md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+        >
+          unit(ml/grams/spoon/tspoon/pices)
+        </label>
+        <input
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          id="grid-zip"
+          type="text"
+          v-model="editRecipeId.unit"
+          ref="unit"
+          placeholder="unit(ml/grams/spoon/tspoon/pices)"
+        />
+      </div>
+      <div class="md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+        >
+          Number of unit
+        </label>
+        <input
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          id="grid-zip"
+          type="text"
+          v-model="editRecipeId.numberOfunit"
+          ref="numberOfunit"
+          placeholder="Number of unit"
+        />
+      </div>
+    
+       <span>
+      <i class="fas fa-minus-circle " @click="remove(k)" v-show="k || ( !k && inputs.length > 1)">Remove</i>
+      <i class="fas fa-plus-circle" @click="add(k)" v-show="k == inputs.length-1">Add fields</i>
+    </span>
+      
+    </div>
           <button
             type="submit"
             class="bg-black my-5 px-4 py-2 text-lg font-semibold tracking-wider text-white rounded hover:bg-green-600 w-4/12"
@@ -153,7 +208,14 @@ export default {
     editRecipeId: {},
   },
   data() {
-    return {}
+    return {
+       inputs:[{
+        ingredientsName:'',
+        unit:'',
+        numberOfunit:''
+      }],
+    }
+    
   },
   methods: {
     close() {
