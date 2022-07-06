@@ -380,6 +380,7 @@ export default {
         chef: this.chef,
         inputs: this.inputs,
       };
+      // console.log("thhhhh",recipe);
       if (
         this.name != "" &&
         this.timeToCook != "" &&

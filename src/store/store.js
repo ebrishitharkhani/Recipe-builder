@@ -10,8 +10,19 @@ const store = createStore({
           totalServe: '3people',
           method: 'Tech Company',
           status: 'Publish',
-          ingredientsWithMeasurement: 'water ml  200',
-          chef: 'mohit'
+          chef: 'mohit',
+          inputs:[
+            {
+              ingredientsName: 'water',
+              unit: 'ml',
+              numberOfunit: '500'
+            },
+            {
+              ingredientsName: 'besan',
+              unit: 'gm',
+              numberOfunit: '500'
+            },
+          ]
         },
         {
             id: 2,

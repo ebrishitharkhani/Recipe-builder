@@ -12,7 +12,7 @@
           @click.prevent="close"
         >
           ×
-        </button>
+        </button>{{editRecipeId.inputs}}
         <form
           @submit.prevent="submitRecipeData"
           class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2"
@@ -100,21 +100,7 @@
             </div>
           </div>
           <div class="-mx-3 md:flex mb-2">
-            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-                for="grid-city"
-              >
-                Ingredients with measurement
-              </label>
-              <input
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-                type="textarea"
-                :value="editRecipeId.ingredientsWithMeasurement"
-                ref="ingredientsWithMeasurement"
-                placeholder="water ml 200"
-              />
-            </div>
+            
 
             <div class="md:w-1/2 px-3">
               <label
@@ -131,7 +117,7 @@
               />
             </div>
           </div>
-          <div class="-mx-3 md:flex mb-2" v-for="(input,k) in inputs" :key="k">
+          <div class="-mx-3 md:flex mb-2" v-for="item in editInputs" :key="item.index">
       <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -143,8 +129,8 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-city"
           type="textarea"
-          v-model="inputs.ingredientsName"
-          ref="ingredientsName"
+        
+          :value="item.ingredientsName"
           placeholder="Ingredients Name"
         />
       </div>
@@ -159,8 +145,8 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-zip"
           type="text"
-          v-model="inputs.unit"
-          ref="unit"
+          
+          :value="item.unit"
           placeholder="unit(ml/grams/spoon/tspoon/pices)"
         />
       </div>
@@ -174,16 +160,14 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-zip"
           type="text"
-          v-model="inputs.numberOfunit"
-          ref="numberOfunit"
+          
+          :value="item.numberOfunit"
           placeholder="Number of unit"
         />
       </div>
     
        <span>
-      <i class="fas fa-minus-circle " @click="remove(k)" v-show="k || ( !k && inputs.length > 1)">Remove</i>
-      <i class="fas fa-plus-circle" @click="add(k)" v-show="k == inputs.length-1">Add fields</i>
-    </span>
+         </span>
       
     </div>
           <button
@@ -206,14 +190,18 @@ export default {
       type: Boolean,
     },
     editRecipeId: {},
+    editInputs:{},
   },
   data() {
     return {
-       inputs:[{
-        ingredientsName:'',
-        unit:'',
-        numberOfunit:''
-      }],
+    // item:[
+    //   {
+    //       ingredientsName: '',
+    //   unit: '',
+    //   numberOfunit:'',
+    //   }
+    // ],
+      
     }
     
   },
@@ -228,19 +216,25 @@ export default {
         this.$refs.totalServe.value != '' &&
         this.$refs.method.value != '' &&
         this.$refs.status.value != '' &&
-        this.$refs.ingredientsWithMeasurement.value != '' &&
-        this.$refs.chef.value != ''
+        this.$refs.chef.value != '' && 
+        this.$set.unit.value != ''
+      
       ) {
         const recipe = {
           id: this.editRecipeId.id,
+          // inputs: this.editInputs.editRecipeId,
           name: this.$refs.name.value,
           timeToCook: this.$refs.timeToCook.value,
           totalServe: this.$refs.totalServe.value,
           method: this.$refs.method.value,
           status: this.$refs.status.value,
-          ingredientsWithMeasurement: this.$refs.ingredientsWithMeasurement.value,
           chef: this.$refs.chef.value,
+          // inputs: this.item
+          unit:this.$set.unit.vale,
+
         }
+          console.log("thissss",recipe);
+
         this.$store.commit('editRecipe', recipe)
         this.$emit('close')
       } else alert('Empty Input not allowed')

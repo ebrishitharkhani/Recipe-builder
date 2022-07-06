@@ -2,6 +2,7 @@
   <edit-recipe
     :showing="editModalShowing"
     :editRecipeId="editRecipeId"
+    :editInputs="editInputs"
     @close="editModalShowing = false"
   ></edit-recipe>
   <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -242,6 +243,7 @@ export default {
     return {
       editModalShowing: false,
       editRecipeId: null,
+      editInputs: null,
     }
   },
   
@@ -262,6 +264,7 @@ computed:{
     },
     editRecipe(id) {
       this.editRecipeId = id
+      this.editInputs= this.editRecipeId.inputs
       this.editModalShowing = true
     },
   },
