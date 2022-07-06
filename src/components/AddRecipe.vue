@@ -6,13 +6,31 @@
     <div class="-mx-3 md:flex mb-6">
       <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
           for="grid-first-name"
         >
           Name of Recipe
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-red
+            rounded
+            py-3
+            px-4
+            mb-3
+          "
           id="grid-first-name"
           type="text"
           v-model="name"
@@ -21,13 +39,30 @@
       </div>
       <div class="md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
           for="grid-last-name"
         >
           Time to cook
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+          "
           id="grid-last-name"
           v-model="timeToCook"
           type="text"
@@ -38,13 +73,31 @@
     <div class="-mx-3 md:flex mb-6">
       <div class="md:w-full px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
           for="grid-password"
         >
           Total serve
         </label>
         <input
-          class="block appearance-none w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+          class="
+            block
+            appearance-none
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+            mb-3
+          "
           id="grid-password"
           type="text"
           v-model="totalServe"
@@ -55,13 +108,30 @@
     <div class="-mx-3 md:flex mb-2">
       <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
           for="grid-city"
         >
           Method
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+          "
           id="grid-city"
           type="textarea"
           v-model="method"
@@ -71,49 +141,56 @@
 
       <div class="md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
         >
           Status
         </label>
-        <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-          id="grid-zip"
-          type="text"
+
+        
+        <span class="toggle__switch"><input
+          type="checkbox"
+          id="toggle_button"
+          true-value="Publish"
+          false-value="UnPublish"
           v-model="status"
-          placeholder="(UnPublish/Publish)"
-        />
-    <!-- <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">
-  <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
-  <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
-</label> -->
+        /></span>
       </div>
     </div>
     <div class="-mx-3 md:flex mb-2">
-      <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-        <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-          for="grid-city"
-        >
-          Ingredients with measurement
-        </label>
-        <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-          id="grid-city"
-          type="textarea"
-          v-model="ingredientsWithMeasurement"
-          placeholder="water ml 200"
-        />
-      </div>
+      
 
       <div class="md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
         >
           Chef
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+          "
           id="grid-zip"
           type="text"
           v-model="chef"
@@ -121,16 +198,33 @@
         />
       </div>
     </div>
-    <div class="-mx-3 md:flex mb-2" v-for="(input,k) in inputs" :key="k">
+    <div class="-mx-3 md:flex mb-2" v-for="(input, k) in inputs" :key="k">
       <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
           for="grid-city"
         >
           Ingredients Name
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+          "
           id="grid-city"
           type="textarea"
           v-model="input.ingredientsName"
@@ -140,42 +234,90 @@
 
       <div class="md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
         >
           unit(ml/grams/spoon/tspoon/pices)
         </label>
-        <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-          id="grid-zip"
-          type="text"
-          v-model="input.unit"
-          placeholder="unit(ml/grams/spoon/tspoon/pices)"
-        />
+        
+        
+  <select name="unit" v-model="input.unit" id="unit">
+    <option>select</option>
+    <option value="ml">ml</option>
+    <option value="grams">grams</option>
+    <option value="spoon">spoon</option>
+    <option value="tspoon">tspoon</option>
+    <option value="pices">pices</option>
+  </select>
       </div>
       <div class="md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          class="
+            block
+            uppercase
+            tracking-wide
+            text-grey-darker text-xs
+            font-bold
+            mb-2
+          "
         >
           Number of unit
         </label>
         <input
-          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          class="
+            appearance-none
+            block
+            w-full
+            bg-grey-lighter
+            text-grey-darker
+            border border-grey-lighter
+            rounded
+            py-3
+            px-4
+          "
           id="grid-zip"
           type="text"
           v-model="input.numberOfunit"
           placeholder="Number of unit"
         />
       </div>
-    
-       <span>
-      <i class="fas fa-minus-circle " @click="remove(k)" v-show="k || ( !k && inputs.length > 1)">Remove</i>
-      <i class="fas fa-plus-circle" @click="add(k)" v-show="k == inputs.length-1">Add fields</i>
-    </span>
-      
+
+      <span>
+        <i
+          class="fas fa-minus-circle"
+          @click="remove(k)"
+          v-show="k || (!k && inputs.length > 1)"
+          >Remove</i
+        >
+        <i
+          class="fas fa-plus-circle"
+          @click="add(k)"
+          v-show="k == inputs.length - 1"
+          >Add fields</i
+        >
+      </span>
     </div>
     <button
       type="submit"
-      class="bg-black my-5 px-4 py-2 text-lg font-semibold tracking-wider text-white rounded hover:bg-green-600 w-4/12"
+      class="
+        bg-black
+        my-5
+        px-4
+        py-2
+        text-lg
+        font-semibold
+        tracking-wider
+        text-white
+        rounded
+        hover:bg-green-600
+        w-4/12
+      "
     >
       Sbumit
     </button>
@@ -186,77 +328,134 @@
 export default {
   data() {
     return {
-      inputs:[{
-        ingredientsName:'',
-        unit:'',
-        numberOfunit:''
-      }],
-      name:'',
-      timeToCook: '',
-      totalServe: '',
-      method: '',
-      status: '',
-      ingredientsWithMeasurement: '',
-      chef: '',
-    }
+      inputs: [
+        {
+          ingredientsName: "",
+          unit: "",
+          numberOfunit: "",
+        },
+      ],
+      name: "",
+      timeToCook: "",
+      totalServe: "",
+      method: "",
+      status: "Unpublish",
+      chef: "",
+    };
   },
-
-  methods: {
-    add () {
-      this.inputs.push({
-        ingredientsName:'',
-        unit:'',
-        numberOfunit:''
-      })
-      console.log("sdfgh",this.inputs)
+  computed: {
+    isActive() {
+      return this.status;
     },
 
-    remove (index) {
-      this.inputs.splice(index, 1)
+    checkedValue: {
+      get() {
+        return this.defaultState;
+      },
+      set(newValue) {
+        this.status = newValue;
+      },
+    },
+  },
+  methods: {
+    add() {
+      this.inputs.push({
+        ingredientsName: "",
+        unit: "",
+        numberOfunit: "",
+      });
+      console.log("sdfgh", this.inputs);
+    },
+
+    remove(index) {
+      this.inputs.splice(index, 1);
     },
     submitRecipeData() {
       const recipe = {
         name: this.name,
-        timeToCook: this.timeToCook,
-        totalServe: this.totalServe,
+        timeToCook: this.timeToCook + " " + "Hours",
+        totalServe: this.totalServe + " " + "People",
         method: this.method,
         status: this.status,
-        ingredientsWithMeasurement: this.ingredientsWithMeasurement,
         chef: this.chef,
-        inputs:this.inputs,
-      }
+        inputs: this.inputs,
+      };
       if (
-        this.name != '' &&
-        this.timeToCook != '' &&
-        this.totalServe != '' &&
-        this.method != '' &&
-        this.status != '' &&
-        this.ingredientsWithMeasurement != '' &&
-        this.chef != '' &&
-        this.inputs !=''
+        this.name != "" &&
+        this.timeToCook != "" &&
+        this.totalServe != "" &&
+        this.method != "" &&
+        this.status != "" &&
+        this.chef != "" &&
+        this.inputs != ""
       ) {
-        this.$store.commit('addRecipe', recipe)
-        this.name != '' 
-        this.timeToCook != '' 
-        this.totalServe != '' 
-        this.method != '' 
-        this.status != '' 
-        this.ingredientsWithMeasurement != '' 
-        this.chef != ''
-        this.inputs != ''
-        this.$router.push({ path: '/recipe-list' })
-      } else alert('Please fillup all the input box')
+        this.$store.commit("addRecipe", recipe);
+        this.name != "";
+        this.timeToCook != "";
+        this.totalServe != "";
+        this.method != "";
+        this.status != "";
+        this.chef != "";
+        this.inputs != "";
+        this.$router.push({ path: "/recipe-list" });
+      } else alert("Please fillup all the input box");
     },
   },
-}
+};
 </script>
 
 <style scoped>
-.add-more-btn{
+.add-more-btn {
   background: #000;
   color: #fff;
   padding: 4px 4px;
   height: 35px;
   margin-top: 30px;
+}
+.toggle__button {
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+}
+.toggle__button input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+.toggle__button .toggle__switch {
+  display: inline-block;
+  height: 12px;
+  border-radius: 6px;
+  width: 40px;
+  background: #bfcbd9;
+  box-shadow: inset 0 0 1px #bfcbd9;
+  position: relative;
+  margin-left: 10px;
+  transition: all 0.25s;
+}
+
+.toggle__button .toggle__switch::after,
+.toggle__button .toggle__switch::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  left: 0;
+  top: -3px;
+  transform: translateX(0);
+  transition: all 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6);
+}
+
+.toggle__button .toggle__switch::after {
+  background: #4d4d4d;
+  box-shadow: 0 0 1px #666;
+}
+.toggle__button .toggle__switch::before {
+  background: #4d4d4d;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 </style>

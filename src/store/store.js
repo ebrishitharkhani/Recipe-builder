@@ -19,7 +19,7 @@ const store = createStore({
             timeToCook: '2hr',
             totalServe: '3people',
             method: 'Tech Company',
-            status: 'Publish',
+            status: 'UnPublish',
             ingredientsWithMeasurement: 'water ml  200',
             chef: 'mohit'
         },
@@ -39,8 +39,7 @@ const store = createStore({
             timeToCook: '2hr',
             totalServe: '3people',
             method: 'Tech Company',
-            status: 'Publish',
-            ingredientsWithMeasurement: 'water ml  200',
+            status: 'UnPublish',
             chef: 'mohit'
         },
       ],

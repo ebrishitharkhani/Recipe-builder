@@ -143,7 +143,7 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-city"
           type="textarea"
-          v-model="editRecipeId.ingredientsName"
+          v-model="inputs.ingredientsName"
           ref="ingredientsName"
           placeholder="Ingredients Name"
         />
@@ -159,7 +159,7 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-zip"
           type="text"
-          v-model="editRecipeId.unit"
+          v-model="inputs.unit"
           ref="unit"
           placeholder="unit(ml/grams/spoon/tspoon/pices)"
         />
@@ -174,7 +174,7 @@
           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
           id="grid-zip"
           type="text"
-          v-model="editRecipeId.numberOfunit"
+          v-model="inputs.numberOfunit"
           ref="numberOfunit"
           placeholder="Number of unit"
         />
